@@ -16,7 +16,8 @@
         }
     ],
     "require": {
-        "composer-plugin-api": "^1.0 || ^2.0"
+        "composer-plugin-api": "^1.0 || ^2.0",
+        "laravelcollective/html": "^6.2"
     },
     "autoload": {
         "psr-4": {

@@ -67,7 +67,8 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    //J'ai changé le fuseau horaire pour avoir l'heure de paris dans created_at et updated_at
+    'timezone' => 'Europe/Paris',
 
     /*
     |--------------------------------------------------------------------------
@@ -165,7 +166,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        Collective\Html\HtmlServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -226,6 +227,10 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        //Pour utiliser la biliotheque laravelcollective
+        'Form'=> Collective\Html\FormFacade::class,
+        'Html'=> Collective\Html\HtmlFacade::class,
 
     ],
 
