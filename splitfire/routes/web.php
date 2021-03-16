@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TweetController;
+use App\Http\Controllers\TweetsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,15 +16,15 @@ use App\Http\Controllers\TweetController;
 Route::get('/', function (){
     return view('welcome');
 });
-Route::post('/generation', [TweetController::class, 'generation']);
+Route::post('/generation', [TweetsController::class, 'generation']);
 
 Route::prefix('tweet')->group(function(){
-    Route::get('/nouveau', [TweetController::class, 'new']);
+    Route::get('/nouveau', [TweetsController::class, 'new']);
 });
 
 Route::prefix('tweets')->group(function(){
-    Route::post('/', [TweetController::class, 'insert']);
-    Route::get('/', [TweetController::class, 'list']);
+    Route::post('/', [TweetsController::class, 'insert']);
+    Route::get('/', [TweetsController::class, 'list']);
 });
 
 
