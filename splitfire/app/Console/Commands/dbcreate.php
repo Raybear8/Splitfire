@@ -1,7 +1,11 @@
 <?php
 
+namespace App\Console\Commands;
 
-class dbcreate extends \Illuminate\Console\Command
+use Illuminate\Console\Command;
+use Illuminate\Support\Facades\DB;
+
+class dbcreate extends Command
 {
     /**
      * The name and signature of the console command.
@@ -47,8 +51,6 @@ class dbcreate extends \Illuminate\Console\Command
 
         $query = "CREATE DATABASE IF NOT EXISTS $schemaName CHARACTER SET $charset COLLATE $collation;";
         DB::statement($query);
-
-        echo "Database $schemaName created successfully";
 
         config(['database.connections.mysql.database' => $schemaName]);
     }
