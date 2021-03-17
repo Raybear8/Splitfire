@@ -1,0 +1,31 @@
+Bonjour Madame , Monsieur
+
+Procédure d’installation :
+
+Lors de l’installation du projet LARAVEL sous NGNIX il sera nécessaire de faire un 
+« composer install » pour installer les dépendances dans le dossier Splitfire et splitfire
+
+Il faudra configurer le ficher nginx.conf qui se trouve dans le dossier nginx/conf/ pour lier l'application laravel avec nginx.
+Il faudra configurer la connexion de la base de données dans le fichier .env et le fichier database.php qui se trouve dans le dossier config, 
+
+La mise en place de la base de données (si vous n’utilisez pas le dump) nécessaire à l’application SPLITFIRE se fera en ligne de commande dans le dossier «splitfire»
+
+Création de la base « php artisan db:create »
+Migration des tables vers la base « php artisan migrate »
+
+Pour lancer l’application sous nginx il faudra lancer deux instructions
+Dans le dossier php de votre version actuelle (selon le cahier des charges php 7.4.X » lancer la commande « php-ci.exe -b adresseIP:Port »
+
+Dans le dossier nginx, lancer la commande « ngix.exe » (ou exécuter autant qu’admistrateur le logiciel)
+
+Pour votre information , Il m’a fallut un peu de temps pour la prise en main du Framwork LARAVEL et du test de fonctionnement sous NGNIX de l’application. 
+
+Lors de l’accès à la page d’accueil du site, un bouton permet de générer des tweets par paquet de 2000 avec un nombre de liaisons aléatoire de 4 parmi une liste de 8 hashtags.
+Il es possible d’ajouter des nouveaux tweets par le biais d’un bouton sur la page  .
+Cela permet de tester plus facilement l’application.
+
+En espérant avoir répondu à vos attentes.
+
+Cordialement
+
+FRANOUX Pierre
