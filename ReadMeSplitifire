@@ -2,6 +2,8 @@ Bonjour Madame , Monsieur
 
 Procédure d’installation :
 
+Pour récupérer le projet Splitfire sur votre ordinateur en ligne de commande, dans un dossier que vous aurez choisi:: « git clone https://github.com/Raybear8/Splitfire.git »
+
 Lors de l’installation du projet LARAVEL sous NGNIX il sera nécessaire de faire un 
 « composer install » pour installer les dépendances dans le dossier Splitfire et splitfire
 
